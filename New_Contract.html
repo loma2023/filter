@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>تعاقد جديد</title>
+</head>
+
+<body>
+    <div class="list"></div>
+    <div class="main">
+        <header class="header"></header>
+
+        <section class="section-form">
+            <img src="https://dynamics.folio3.com/blog/wp-content/uploads/2021/03/ERP.png" style="height: 500px;">
+            <form>
+                <input class="date" type="date">
+                <input class="name" type="text" placeholder="اسم العميل">
+                <select class="city">
+                    <option disabled selected hidden>اختار المدينه</option>
+                </select>
+                <select class="vilage">
+                    <option disabled selected hidden>اختار القريه</option>
+                </select>
+                <input class="address" type="text" placeholder="العنوان التفصيلي للعميل">
+                <input class="phone" type="tel" placeholder="هاتف العميل">
+                <select class="type">
+                    <option disabled selected hidden>اختار نوع العقد</option>
+                    <option value="30">كل شهر</option>
+                    <option value="60">كل شهرين</option>
+                    <option value="90">كل 3 شهور</option>
+                </select>
+                <select class="typefilter">
+                    <option disabled selected hidden>اختار نوع الفلتر</option>
+                    <option value="7 مراحل">7 مراحل</option>
+                    <option value="5 مراحل">5 مراحل</option>
+                    <option value="3 مراحل">3 مراحل</option>
+                </select>
+                <input class="price1" type="number" placeholder="المقدم">
+                <input class="price2" type="number" placeholder="قيمة العقد">
+
+                <input type="button" id="save" onclick="insert_value(id)" value="حــفــظ" class="btn_save">
+            </form>
+        </section>
+
+        <div class="container-contact"> </div>
+
+        <div class="loader">
+            <div class="bg-loader">
+                <div class="load"></div>
+            </div>
+            <img src="CSS/loader-GIF.gif" alt="" >
+        </div>
+
+        <footer class="footer"></footer>
+
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="JS/main.js"></script>
+    <script src="JS/New_Contract.js"></script>
+</body>
+
+</html>

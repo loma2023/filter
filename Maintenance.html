@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>طلبات الصيانه</title>
+</head>
+
+<body>
+    <div class="list"></div>
+    <div class="main">
+        <header class="header"></header>
+
+        <div class="container-table">
+            <img class="account_img" src="CSS/1.png">
+            <section class="section-search">
+                <div>
+                    <select class="city" onchange="Search()">
+                        <option disabled selected hidden>اختار المدينه</option>
+                    </select>
+                    <a class="fas fa-search"></a>
+                </div>
+                <div>
+                    <select class="vilage" onchange="Search()">
+                        <option disabled selected hidden>اختار القريه</option>
+                    </select>
+                    <a class="fas fa-search"></a>
+                </div>
+            </section>
+            <div class="parent-table">
+                <table>
+                    <thead class="table-head">
+                        <tr>
+                            <td>ID</td>
+                            <td>اسم العميل</td>
+                            <td>المدينه</td>
+                            <td>القريه</td>
+                            <td>العنوان</td>
+                            <td>رقم الهاتف</td>
+                            <td>نوع الفلتر</td>
+                            <td>نوع الشمعه</td>
+                            <td>رقم الزيارة</td>
+                            <td>المحصل</td>
+                            <td>تنبيه</td>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="parent_abc">
+            <div class="abc">
+                <i id="canceel" onclick="toggle2(id)" class="fas fa-circle-xmark"></i>
+                <div style="text-align: start;margin-bottom: 15px;">
+                <h3>اسم العميل : <span class="name_customer"></span></h3>
+            </div>
+                <input type="date" class="date">
+                <input type="number" placeholder="قيمة القسط" class="price">
+                <input type="button" id="save" onclick="insert_value(id)" value="حــفــظ" class="btn_save">
+            </div>
+        </div>
+
+
+        <div class="loader">
+            <div class="bg-loader">
+                <div class="load"></div>
+            </div>
+            <img src="CSS/loader-GIF.gif" alt="">
+        </div>
+
+        <a onclick="Doprint(event)" class="fas fa-print"></a>
+        <footer class="footer"></footer>
+    </div>
+
+
+
+
+
+
+    <!-- =========== Scripts =========  -->
+    <script src="JS/main.js"></script>
+    <script src="JS/Maintenance.js"></script>
+</body>
+
+</html>
